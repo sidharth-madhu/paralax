@@ -1,0 +1,111 @@
+body, html {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+header {
+    background: linear-gradient(135deg, #ff6f61 0%, #ff9a8b 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #ff9a8b;
+}
+
+.parallax {
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Darker overlay for better text readability */
+    z-index: 1;
+}
+
+.parallax .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+#taj-mahal {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Taj-Mahal.jpg/1200px-Taj-Mahal.jpg');
+}
+
+#gateway-of-india {
+    background-image: url('https://t3.ftcdn.net/jpg/06/02/09/88/360_F_602098878_8WkD9zyRbG4giJkhCXVpMl5s3SA5GclD.jpg');
+}
+
+#india-gate {
+    background-image: url('https://media.istockphoto.com/id/898467608/photo/the-india-gate-in-delhi.webp?b=1&s=170667a&w=0&k=20&c=WltioK-eXIqNSPvHlBQ9xF3HdXOHGeNlNBdVUBT-hcc=');
+}
+
+.description {
+    padding: 40px;
+    background: #ffffff;
+    color: #333;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 2.8em;
+    color: #ff6f61;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    margin: 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    transition: transform 0.4s ease-in-out, background 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    border: 3px solid #ff6f61;
+}
+
+h2:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: #ff9a8b; /* Lighter border color on hover */
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2.2em;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+}
